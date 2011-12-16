@@ -11,6 +11,7 @@ Admin::ProductsHelper.module_eval do
 end
 
 Admin::ProductsController.class_eval do
+  helper :products
   before_filter :vat_fix , :only => :update
   
   def vat_fix
